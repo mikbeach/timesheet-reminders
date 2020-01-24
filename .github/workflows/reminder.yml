@@ -1,0 +1,15 @@
+name: Email Reminder
+
+on:
+  schedule:
+    - cron: '45 09 * * 5'
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Email A Timesheet Reminder
+        run: ./send.sh
+        env:
+           SENDGRID_API_KEY: ${{secrets.SENDGRID_API_KEY}}

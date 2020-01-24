@@ -1,8 +1,9 @@
 name: Timesheet Reminders
 
 on:
-  schedule:
-    - cron: '21 09 * * 5'
+  push:
+   branches:
+     - master
 
 jobs:
   reminder:

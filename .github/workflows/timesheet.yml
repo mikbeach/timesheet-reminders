@@ -2,7 +2,7 @@ name: Timesheet Reminders
 
 on:
   schedule:
-    - cron: '* 10 * * 5'
+    - cron: '* 0921 * * 5'
 
 jobs:
   reminder:

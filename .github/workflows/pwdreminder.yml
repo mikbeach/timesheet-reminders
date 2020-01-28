@@ -1,0 +1,16 @@
+name: Remind Tony to change his password
+
+on:
+  schedule:
+    - cron: '30 13 28 * *'
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Send text to remind Tony to change his password
+        run: ./pwdchange.sh
+        env:
+           TWILIO_ACCOUNT: ${{secrets.TWILIO_ACCOUNT}}
+           TWILIO_SMS_AUTH_TOKEN: ${{secrets.SENDGRID_API_KEY}}

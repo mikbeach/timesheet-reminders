@@ -2,7 +2,7 @@ name: Remind Tony to change his password
 
 on:
   schedule:
-    - cron: '35 13 28 * *'
+    - cron: '00 10 1 * *'
 
 jobs:
   reminder:

@@ -2,7 +2,7 @@ name: Email Reminder
 
 on:
   schedule:
-    - cron: '45 09 * * 5'
+    - cron: '00 12 * * 4'
 
 jobs:
   reminder:
